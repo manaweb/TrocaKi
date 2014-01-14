@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Bootstrap changes stylesheet
+   ========================================================================== */
+
+.container {
+  max-width: none !important;
+  width: 970px;
+}
+
+.navbar {
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Wesley H. de Oliveira stylesheet
+   ========================================================================== */
+* {
+	font-family: 'century_gothicregular' !important;
+}
+.separador {
+	background: url(../img/separador-menu.png) no-repeat 90% 50%;
+}
+.espaco {
+	margin-top: 10px;
+}
