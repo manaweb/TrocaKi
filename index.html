@@ -11,8 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="fonts/century_gothic/stylesheet.css">
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
-
+		<link rel="stylesheet" href="css/jcarousel.responsive.css">
+		<link rel="stylesheet" href="css/main.css">
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
@@ -77,10 +77,82 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+      	<div class="barraLateral"></div>
+        <ul class="parceiros">
+        	<li><img src="img/bridgestone.png"/></li>
+        	<li><img src="img/michelin.png"/></li>
+        	<li><img src="img/yokohama.png"/></li>
+        	<li><img src="img/cofap.png"/></li>
+        </ul>
+      </div>
+
+      <div class="row">
+      	<div class="carousel-content">
+      		<div class="jcarousel-wrapper">
+                <div class="jcarousel" data-jcarousel="true">
+                    <ul> 
+	                    <li>
+	                    	<div class="contentItem">
+		                		<img src="img/suspensao.png" alt="">
+		                	</div>
+		                </li>
+		                <li>
+		                	<div class="contentItem">
+		                    	<img src="img/freio.png" alt="">
+		                    </div>
+		                </li>
+		                <li>
+		                	<div class="contentItem">
+		                		<img src="img/oleo.png" alt="">
+		                	</div>
+		               	</li>
+
+		               	<li>
+	                    	<div class="contentItem">
+		                		<img src="img/suspensao.png" alt="">
+		                	</div>
+		                </li>
+		                <li>
+		                	<div class="contentItem">
+		                    	<img src="img/freio.png" alt="">
+		                    </div>
+		                </li>
+		                <li>
+		                	<div class="contentItem">
+		                		<img src="img/oleo.png" alt="">
+		                	</div>
+		               	</li>
+	               	</ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true">‹</a>
+                <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">›</a>
+            </div><!-- end jcarousel-wrapper -->
+      	</div><!-- end carousel content -->
+      </div><!-- end row -->
+      <div class="row">
+      	<div class="box-left">
+      		<div class="sobre">
+      			<h1>Sobre a Empresa</h1>
+      			<p>A empresa, devidamente, atua no mercado a mais de 10 anos. Atualmente se encontra instalada no Distrito Industrial de JABOTICABAL-SP, colaborando para o crescimento do Distrito da Cidade.</p>
+      		</div>
+      	</div>
+      	<div class="likeboxfacebook">
+      		<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=624&amp;height=292&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:625px; height:292px;" allowTransparency="true"></iframe>
+      	</div>
+      </div><!-- end row -->
+      <hr>
+
+      <footer>
+        <p>Rodapé aki</p>
+      </footer>
+>>>>>>> 946ca1665f7bccb2971f7c9a1d4fcde5eafde370
     </div> <!-- /container -->        <script src="js/vendor/jquery-1.10.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
@@ -88,7 +160,8 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="js/jquery.jcarousel.min.js"></script>
+        <script src="js/jcarousel.responsive.js"></script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
