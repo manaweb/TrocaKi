@@ -38,7 +38,6 @@
 .espaco {
 	margin-top: 10px;
 }
-<<<<<<< HEAD
 .central-de-vendas {
 	font-size: 12px;
 }
@@ -93,7 +92,7 @@
 	padding: 0px;
 	height: 439px;
 	background-color: black;
-=======
+}
 .parceiros {
     vertical-align: middle;
     display: inline-block;
@@ -186,5 +185,4 @@
 	display: inline-block;
 	height: 295px;
 	vertical-align: top;
->>>>>>> 946ca1665f7bccb2971f7c9a1d4fcde5eafde370
 }
