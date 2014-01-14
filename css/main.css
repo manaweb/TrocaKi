@@ -12,15 +12,84 @@
 	margin-bottom: 15px;
 }
 
+.form-control:focus {
+	border-color: #F88A09;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 138, 9, 0.6);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 138, 9, 0.6);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 138, 9, 0.6);
+	-ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 138, 9, 0.6);
+	-o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(248, 138, 9, 0.6);
+}
+
 /* ==========================================================================
    Wesley H. de Oliveira stylesheet
    ========================================================================== */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
 * {
-	font-family: 'century_gothicregular' !important;
+	font-family: 'century_gothicregular','Glyphicons Halflings' !important;
 }
 .separador {
 	background: url(../img/separador-menu.png) no-repeat 90% 50%;
 }
 .espaco {
 	margin-top: 10px;
+}
+.central-de-vendas {
+	font-size: 12px;
+}
+.celular-xs {
+	width: auto;
+	height: 24px;
+	padding-top: 4px;
+	padding-left: 25px;
+	color: #777777;
+	background: url(../img/celular-xs.png) no-repeat;
+	display: inline-block;
+}
+.buscar {
+	color: #aaa;
+	background-color: #EDEDED;
+}
+/* Bootsnipp */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  background-color: #CA4607;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 0px 0;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+.btn-primary:hover,.btn-primary:active {
+	background-color: #E34F00;
+	color: white;
+}
+.jumbotron {
+	margin: 0px;
+	padding: 0px;
+	height: 439px;
+	background-color: black;
 }
