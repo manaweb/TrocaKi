@@ -24,3 +24,96 @@
 .espaco {
 	margin-top: 10px;
 }
+.parceiros {
+    vertical-align: middle;
+    display: inline-block;
+}
+.parceiros li {
+	list-style: none;
+	height: 60px;
+	vertical-align: middle;
+	display: inline;
+	margin-left: 20px;
+}
+.barraLateral{
+	height: 60px;
+	width: 465px;
+	margin-left: -465px;
+	background: #E34F00;
+	display: inline-block;
+	vertical-align: middle;
+}
+/* ==========================================================================
+   jcarousel - carousel de produtos
+   ========================================================================== */
+.jcarousel-wrapper{
+	border: none !important;
+}
+
+.jcarousel li{
+	width: 244px !important;
+	height: 265px;
+	margin: 30px;
+	background-color: #FFF;
+}
+.jcarousel ul{
+	padding-left: 30px;
+	height: 345px;
+	margin-left: 25px;
+	background-color: #F4F4F4;
+}
+.jcarousel-control-prev, .jcarousel-control-next {
+	position: absolute;
+	top: 15px;
+	width: 30px;
+	height: 345px;
+	text-align: center;
+	background: #4E443C;
+	color: #FFF;
+	text-decoration: none;
+	font: 24px/27px Arial, sans-serif;
+	line-height: 345px;
+	border-radius: 0;
+}
+.jcarousel-control-prev {
+	left: -10px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.jcarousel-control-next {
+	right: -10px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.jcarousel img {
+	display: inline-block !important;
+}
+.contentItem {
+	display: table-cell;
+	vertical-align: middle;
+	width: 244px;
+	height: 265px;
+	text-align: center;
+}
+
+/* ==========================================================================
+   box laranja e like box
+   ========================================================================== */
+.box-left {
+	width: 785px;
+	height: 295px;
+	background-color: #FF8F0E;
+	display: inline-block;
+	margin-left: -455px;
+}
+.sobre {
+	width: 330px;
+	float: right;
+	color: #FFF;
+	vertical-align: top;
+}
+.likeboxfacebook{
+	display: inline-block;
+	height: 295px;
+	vertical-align: top;
+}
