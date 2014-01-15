@@ -92,11 +92,10 @@ body{
 	color: white;
 }
 .jumbotron {
-	margin: 0 0 30px -50%;
+	margin: 0 0 30px 0;
 	padding: 0px;
 	height: 439px;
 	background-color: black;
-	width: 1913px;
 }
 .parceiros {
     vertical-align: middle;
@@ -140,6 +139,7 @@ body{
    ========================================================================== */
 .jcarousel-wrapper{
 	border: none !important;
+	width: 963px;
 }
 
 .jcarousel li{
@@ -174,12 +174,12 @@ body{
 }
 
 .jcarousel-control-prev {
-	left: -10px;
+	left: 0px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
 .jcarousel-control-next {
-	right: -10px;
+	right: 0px;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -220,9 +220,6 @@ body{
 /* ==========================================================================
    colunas de contatos index
    ========================================================================== */
-.boxContatos{
-	width: 100%;
-}
 
 .boxContatos > div{
 	height: 362px;
@@ -261,16 +258,38 @@ body{
 	font-size: 20px;
 	margin-top: 50px;
 }
-.form-index{
-	margin-top: 15px;
+.boxContatos h4 {
+	font-weight: bolder;
+	letter-spacing: -1px;
 }
-.form-index .form-control {
+.form-index{
+	margin-top: 35px;
+}
+
+.form-index .form-control {	
 	background-color: #FF8F0E;
 }
+
 .form-index .form-group{
 	margin-bottom: 3px;
 }
+
+.boxContatos p {
+	font-size: 13px;
+}
+
 .boxContatos .btn-warning{
 	box-shadow: 4px 4px #D6D6D7;
 	background-color: #FF8F0E;
+}
+
+.boxContatos > div:nth-child(2) .btn-warning, .boxContatos > div:nth-child(3) .btn-warning{
+	margin-top: 65px;
+}
+
+.boxContatos .btn-warning:hover{
+	background-color: #F86A1D;
+}
+.control-label {
+	text-align: left !important;
 }
