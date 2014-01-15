@@ -32,6 +32,13 @@
 * {
 	font-family: 'century_gothicregular','Glyphicons Halflings' !important;
 }
+body{
+	overflow-x: hidden;
+}
+.tudo{
+	width: 960px;
+	margin: auto;
+}
 .separador {
 	background: url(../img/separador-menu.png) no-repeat 90% 50%;
 }
@@ -88,10 +95,11 @@
 	color: white;
 }
 .jumbotron {
-	margin: 0px;
+	margin: 0 0 30px -50%;
 	padding: 0px;
 	height: 439px;
 	background-color: black;
+	width: 1913px;
 }
 .parceiros {
     vertical-align: middle;
@@ -112,6 +120,24 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+
+.carousel-indicators{
+	bottom: -50px;
+}
+.carousel-indicators li{
+	border-radius: 3px !important;
+	border-color: #DDDDDD;
+}
+
+.carousel-indicators .active {
+	background-color: #FF8F0E;
+	border-color: #FF8F0E;
+}
+
 /* ==========================================================================
    jcarousel - carousel de produtos
    ========================================================================== */
@@ -144,6 +170,12 @@
 	line-height: 345px;
 	border-radius: 0;
 }
+
+.jcarousel-control-prev:hover, .jcarousel-control-prev:focus, .jcarousel-control-next:hover, .jcarousel-control-next:focus{
+	color: #FFF;
+	text-decoration: none;
+}
+
 .jcarousel-control-prev {
 	left: -10px;
 	border-top-left-radius: 5px;
@@ -185,4 +217,37 @@
 	display: inline-block;
 	height: 295px;
 	vertical-align: top;
+}
+
+/* ==========================================================================
+   colunas de contatos index
+   ========================================================================== */
+.boxContatos{
+	width: 100%;
+}
+
+.boxContatos > div{
+	height: 362px;
+	background-position: right top 25px;
+	background-repeat: no-repeat;
+	padding-top: 15px;
+}
+
+.boxContatos > div:first-child{
+	background-image: url(../img/celular-box.png);
+}
+
+.boxContatos > div:nth-child(2){
+	background-image: url(../img/mail-box.png);
+}
+
+.boxContatos > div:nth-child(3){
+	background-image: url(../img/telemarketing-box.png);
+}
+
+.boxContatos > div:first-child, .boxContatos > div:last-child{
+	background-color: #EFEFF0;
+}
+.centralVendas{
+
 }
