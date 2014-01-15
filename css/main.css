@@ -35,10 +35,6 @@
 body{
 	overflow-x: hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> wesleyferreira
 .separador {
 	background: url(../img/separador-menu.png) no-repeat 90% 50%;
 }
@@ -73,11 +69,8 @@ body{
   padding: 0px 0;
   line-height: 1.428571429;
   border-radius: 15px;
-<<<<<<< HEAD
   left: 13px;
   position: relative;
-=======
->>>>>>> wesleyferreira
 }
 .btn-circle.btn-lg {
   width: 50px;
@@ -99,7 +92,6 @@ body{
 	background-color: #E34F00;
 	color: white;
 }
-<<<<<<< HEAD
 .menu {
 	
 }
@@ -116,10 +108,6 @@ body{
 	text-decoration: none;
 }
 .jumbotron {
-=======
-.jumbotron {
-	margin: 0 0 30px 0;
->>>>>>> wesleyferreira
 	padding: 0px;
 	height: 439px;
 	background-color: black;
@@ -166,10 +154,7 @@ body{
    ========================================================================== */
 .jcarousel-wrapper{
 	border: none !important;
-<<<<<<< HEAD
-=======
 	width: 963px;
->>>>>>> wesleyferreira
 }
 
 .jcarousel li{
@@ -204,20 +189,12 @@ body{
 }
 
 .jcarousel-control-prev {
-<<<<<<< HEAD
-	left: -10px;
-=======
 	left: 0px;
->>>>>>> wesleyferreira
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
 .jcarousel-control-next {
-<<<<<<< HEAD
-	right: -10px;
-=======
 	right: 0px;
->>>>>>> wesleyferreira
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -252,37 +229,12 @@ body{
 	display: inline-block;
 	height: 295px;
 	vertical-align: top;
-<<<<<<< HEAD
-=======
 	border: 1px solid #CCCCCC;
->>>>>>> wesleyferreira
 }
 
 /* ==========================================================================
    colunas de contatos index
    ========================================================================== */
-<<<<<<< HEAD
-.boxContatos{
-	width: 100%;
-}
-
-.boxContatos > div{
-	height: 362px;
-	background-position: right top 25px;
-	background-repeat: no-repeat;
-	padding-top: 15px;
-}
-
-.boxContatos > div:first-child{
-	background-image: url(../img/celular-box.png);
-}
-
-.boxContatos > div:nth-child(2){
-	background-image: url(../img/mail-box.png);
-}
-
-.boxContatos > div:nth-child(3){
-=======
 
 .boxContatos > div{
 	height: 362px;
@@ -310,14 +262,12 @@ body{
 }
 
 .boxContatos > div:nth-child(3) > .icone{
->>>>>>> wesleyferreira
 	background-image: url(../img/telemarketing-box.png);
 }
 
 .boxContatos > div:first-child, .boxContatos > div:last-child{
 	background-color: #EFEFF0;
 }
-<<<<<<< HEAD
 .centralVendas{
 
 }
@@ -353,8 +303,7 @@ body{
 	background: -ms-linear-gradient(top,  #c7c7c7 1%,#d5d5d5 75%); /* IE10+ */
 	background: linear-gradient(to bottom,  #c7c7c7 1%,#d5d5d5 75%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#d5d5d5',GradientType=0 ); /* IE6-8 */
-=======
-
+}
 .boxContatos > div:nth-child(3) > .telefone{
 	font-size: 20px;
 	margin-top: 50px;
@@ -393,5 +342,4 @@ body{
 }
 .control-label {
 	text-align: left !important;
->>>>>>> wesleyferreira
 }
