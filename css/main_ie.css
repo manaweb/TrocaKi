@@ -1,0 +1,12 @@
+.produtos li{
+	background: #000;
+}
+.produtos li:hover {
+	background: url(../img/plus.png) 50% 40% no-repeat #000 !important;
+}
+.produtos li:hover h3{
+	visibility: visible;
+}
+.produtos img:hover{
+	filter: alpha(opacity=25);
+}

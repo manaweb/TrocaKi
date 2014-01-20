@@ -62,7 +62,6 @@ body{
   width: 30px;
   height: 30px;
   font-size: 12px;
-  background-color: #CA4607;
   color: white;
   border: none;
   text-align: center;
@@ -88,8 +87,14 @@ body{
   line-height: 1.33;
   border-radius: 35px;
 }
+.btn-primary {
+	background-color: #CA4607;
+	border: 1px solid #CA4607;
+	color: white;
+}
 .btn-primary:hover,.btn-primary:active {
 	background-color: #E34F00;
+	border-color: #CA4607;
 	color: white;
 }
 .menu {
@@ -236,6 +241,17 @@ body{
    colunas de contatos index
    ========================================================================== */
 
+.boxContatos{
+	width: 100%;
+}
+
+.boxContatos > div{
+	height: 362px;
+	background-position: right top 25px;
+	background-repeat: no-repeat;
+	padding-top: 15px;
+}
+
 .boxContatos > div{
 	height: 362px;
 	padding-top: 15px;
@@ -342,4 +358,80 @@ body{
 }
 .control-label {
 	text-align: left !important;
+}
+/********************* Pagina Produtos CSS  *******************************************/
+
+.loja-produto-box{
+	margin:1% 1% 2%;
+	padding:1%;
+}
+.produto-box{
+	padding:0px;
+}
+#menu-lateral{
+	background-color:#F5F5F5;
+}
+#menu-lateral a{
+	text-decoration:none;
+	color:#454545;
+}
+.separador-menu{
+	border:0;
+	border-top:1px solid #DEDEDE;
+	margin-bottom:4px;
+	margin-top:4px;
+}
+.menu-bar{
+	padding:12px;
+}
+.bullet{
+	list-style-image:url(./img/bullet-naver.png) !important;
+	list-style-type:none;
+	list-style-position:outside;
+	padding:12px;
+}
+.pesquisar{
+/*border-radius*/
+-webkit-border-radius:0 !important;
+   -moz-border-radius:0 !important;
+        border-radius:0 !important;
+}
+.produtos a {text-decoration: none}
+.produtos .titulo {
+	margin-top: 110px;
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+	visibility: hidden;
+}
+.produtos ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.produtos li, .produtos li img, .produtos li a {
+	width: 188px;
+	height: 190px;
+}
+.produtos li {
+	border: 1px solid #fff;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	float: left;
+}
+.produtos li a {
+	z-index: 999;
+	position: absolute;
+}
+.produtos li a:hover .titulo {
+	visibility: visible;
+}
+.produtos li a:hover {
+	background: url(../img/plus.png) no-repeat 50% 40%;
+	background-color: rgba(0,0,0,0.75);
+	-webkit-transition: 0.3s background-color;
+	-moz-transition: 0.3s background-color;
+	-o-transition: 0.3s background-color;
+	transition: 0.3s background-color;
 }
