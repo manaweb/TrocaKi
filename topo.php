@@ -1,9 +1,14 @@
+<?php
+include("php/config/config.php");
+include("painel/includes/BancoDeDados.php");
+$conexao = db_conectar();
+?>
 <header>
       <div class="section">
         <div class="container navbar">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-              <a href="index.php">
+              <a href="javascript:void(0);">
                 <div class="separador">
                   <img src="img/logo.png" alt="TrocaKi">
                 </div>
@@ -29,17 +34,17 @@
                  <div class="menu clearfix text-left">
                   <ul class="list-inline espaco">
                     <li>
-                      <a href="index.php">
+                      <a href="javascript:void(0);">
                         home
                       </a>
                     </li>
                     <li>
-                      <a href="quemsomos.php">
+                      <a href="javascript:void(0);">
                         quem somos
                       </a>
                     </li>
                     <li>
-                      <a href="produtos.php">
+                      <a href="javascript:void(0);">
                         produtos
                       </a>
                     </li>
@@ -66,43 +71,3 @@
           </div>
         </div>
       </header>
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <div id="carousel-trocaki" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-trocaki" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-trocaki" data-slide-to="1"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <div style="width: 100%;height: 439px;background: url(img/carro.jpg) 50% 50%;"></div>
-                <div class="carousel-caption">
-                  Teste
-                </div>
-              </div>
-               <div class="item">
-                <div style="width: 100%;height: 439px;background: url(img/carro.jpg) 50% 50%;"></div>
-                <div class="carousel-caption">
-                  Teste2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="barraLateral"></div>
-          <ul class="parceiros">
-            <li><img src="img/bridgestone.png"/></li>
-            <li><img src="img/michelin.png"/></li>
-            <li><img src="img/yokohama.png"/></li>
-            <li><img src="img/cofap.png"/></li>
-          </ul>
-        </div>
-    </div>

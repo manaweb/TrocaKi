@@ -1,0 +1,12 @@
+[12-Nov-2013 14:40:12] PHP Warning:  PHP Startup: timezonedb: Unable to initialize module
+Module compiled with module API=20090626, debug=0, thread-safety=0
+PHP    compiled with module API=20060613, debug=0, thread-safety=0
+These options need to match
+ in Unknown on line 0
+[12-Nov-2013 14:42:11] PHP Warning:  PHP Startup: timezonedb: Unable to initialize module
+Module compiled with module API=20090626, debug=0, thread-safety=0
+PHP    compiled with module API=20060613, debug=0, thread-safety=0
+These options need to match
+ in Unknown on line 0
+[12-Nov-2013 14:42:11] PHP Warning:  include_once(/home/rfcasaec/public_html/orcamento/cart../helper/helper.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/rfcasaec/public_html/orcamento/cart/produto.class.php on line 3
+[12-Nov-2013 14:42:11] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/rfcasaec/public_html/orcamento/cart../helper/helper.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/rfcasaec/public_html/orcamento/cart/produto.class.php on line 3
