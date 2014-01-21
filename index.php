@@ -110,6 +110,6 @@
           </div>
         </div>
       </div>
-    <?php include('rodape.php'); ?>
+    <?php include('rodape.php'); //rodape?>
     </body>
 </html>
