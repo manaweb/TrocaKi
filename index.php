@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>TrocaKi</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="fonts/century_gothic/stylesheet.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/jcarousel.responsive.css">
-        <link rel="stylesheet" href="css/main.css">
-        <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
     <?php include_once('topo.php'); ?>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -38,7 +15,7 @@
                             echo "
                               <li>
                                 <div class='contentItem'>
-                                  <a href='verproduto.php?id=".$dadosProdutos['id']."'>
+                                  <a href='verprodutos.php?id=".$dadosProdutos['id']."'>
                                     <img src='painel/arquivos/produtos/".$dadosProdutos['foto1']."' alt='".$dadosProdutos['nome']."'>
                                   </a>
                                 </div>

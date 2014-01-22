@@ -4,8 +4,6 @@
 */
 $(function() {
 	$('#zoomhover img').hide(); // Esconde a div responsável por mostrar a imagem aumentada
-});
-$(window).load(function() {
 	var pos = $('#zoom').offset();
 	var src = $('#zoom img').attr('src'); // Pega o caminho da imagem que irá ser exibida/aumentada
 	

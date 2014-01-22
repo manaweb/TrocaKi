@@ -216,6 +216,10 @@ body{
 	height: 265px;
 	text-align: center;
 }
+.contentItem img {
+	width: 244px;
+	height: auto;
+}
 
 /* ==========================================================================
    box laranja e like box

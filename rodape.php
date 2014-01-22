@@ -6,30 +6,31 @@
               <div class="col-lg-12">
                 <div class="menu clearfix text-right pull-right">
                     <ul class="list-inline espaco">
-                      <li>
-                        <a href="javascript:void(0);">
+                       <li>
+                        <a href="index.php;">
                           home
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:void(0);">
+                        <a href="quemsomos.php">
                           quem somos
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:void(0);">
+                        <a href="produtos.php">
                           produtos
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:void(0);">
-                          contato
+                        <a href="servicos.php">
+                          serviços
                         </a>
                       </li>
-                    </ul>
-                    <a href="javascript:void(0);">
-                      <img src="img/facebook-icon.png">
-                    </a>
+                      <li>
+                        <a href="contato.php">
+                          contato
+                        </a>
+                    </li>
                   </div>
                 </div>
             </div>
