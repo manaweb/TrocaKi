@@ -58,7 +58,7 @@
                  <div class="menu clearfix text-left">
                   <ul class="list-inline espaco">
                     <li>
-                      <a href="index.php;">
+                      <a href="index.php">
                         home
                       </a>
                     </li>
