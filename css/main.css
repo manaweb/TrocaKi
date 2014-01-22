@@ -752,7 +752,8 @@ body{
 	height: 192px;
 }
 .bx-viewport{
-	height: 250px !important;
+	height: 275px !important;
+	margin-top: -21px;
 }
 .bx-pager{
 	display: none !important;

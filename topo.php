@@ -76,23 +76,14 @@
         <div class="container">
           <div id="carousel-trocaki" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <?php
-                
-                $sql = "select * from tbpublicidade order by id_publicidade desc";
-                $result = mysql_query($sql);
-                $qtd = mysql_num_rows($result);
-                $active = 'class="active"';
-                for($i = 0; $i < $qtd; $i++){
-                  echo '<li data-target="#carousel-trocaki" data-slide-to="'.$i.'" '.$active.'></li>';
-                  $active = "";
-                }
-              ?>
-            </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
+              
               <?php
+                $sql = "select * from tbpublicidade order by id_publicidade desc";
+                $result = mysql_query($sql);
+                $qtd = mysql_num_rows($result);
                 $html = "";
                 $active = "active";
                 while($dadosBanner = mysql_fetch_assoc($result)){
@@ -109,6 +100,16 @@
                 echo $html;
               ?>
             </div>
+            <ol class="carousel-indicators">
+            <?php
+              
+              $active = 'class="active"';
+              for($i = 0; $i < $qtd; $i++){
+                echo '<li data-target="#carousel-trocaki" data-slide-to="'.$i.'" '.$active.'></li>';
+                $active = "";
+              }
+            ?>
+          </ol>
           </div>
         </div>
       </div>
