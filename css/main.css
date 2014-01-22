@@ -98,7 +98,7 @@ body{
 	color: white;
 }
 .menu {
-	
+	display: inline-block;
 }
 .menu .espaco {
 	margin-top: 18px;

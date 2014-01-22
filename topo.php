@@ -58,7 +58,7 @@
                         contato
                       </a>
                     </li>
-                    <li class="pull-right">
+                    <li>
                       <a href="javascript:void(0);">
                         <img src="img/facebook-icon.png">
                       </a>
