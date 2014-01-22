@@ -1,8 +1,8 @@
 <?php
-include("php/config/config.php");
-include("painel/includes/BancoDeDados.php");
-$conexao = db_conectar();
-?>
+      include("php/config/config.php");
+      include("painel/includes/BancoDeDados.php");
+      $conexao = db_conectar();
+    ?>
 <header>
       <div class="section">
         <div class="container navbar">
@@ -71,3 +71,56 @@ $conexao = db_conectar();
           </div>
         </div>
       </header>
+
+      <div class="jumbotron">
+        <div class="container">
+          <div id="carousel-trocaki" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <?php
+                
+                $sql = "select * from tbpublicidade order by id_publicidade desc";
+                $result = mysql_query($sql);
+                $qtd = mysql_num_rows($result);
+                $active = 'class="active"';
+                for($i = 0; $i < $qtd; $i++){
+                  echo '<li data-target="#carousel-trocaki" data-slide-to="'.$i.'" '.$active.'></li>';
+                  $active = "";
+                }
+              ?>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <?php
+                $html = "";
+                $active = "active";
+                while($dadosBanner = mysql_fetch_assoc($result)){
+                  $link = $dadosBanner['destino'] == "" ? "" : "href='".$dadosBanner['destino']."' target='_blank'";
+                  $html .= 
+                  '<div class="item '.$active.'">
+                    <div style="width: 100%;height: 439px;background: url(painel/arquivos/banner/'.$dadosBanner['arquivo'].') center no-repeat;"></div>
+                    <div class="carousel-caption">
+                      <a '.$link.'>'.$dadosBanner['titulo'].'</a>
+                    </div>
+                  </div>';
+                  $active = "";
+                }
+                echo $html;
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="barraLateral"></div>
+          <ul class="parceiros">
+            <li><img src="img/bridgestone.png"/></li>
+            <li><img src="img/michelin.png"/></li>
+            <li><img src="img/yokohama.png"/></li>
+            <li><img src="img/cofap.png"/></li>
+          </ul>
+        </div>
