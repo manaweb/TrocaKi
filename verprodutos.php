@@ -1,4 +1,11 @@
-    <?php include('topo.php'); ?>
+    <?php
+    $id = 0;
+    if(isset($_GET['id']) && is_int((int)$_GET['id']) && $_GET['id'] > 0){
+      $id = $_GET['id'];
+    }else{
+      header("Location: index.php");
+    }
+    include('topo.php'); ?>
     <link rel="stylesheet" href="css/jquery.bxslider.css" />
     <div class="container">
        <h2>PRODUTOS</h2>
@@ -7,7 +14,7 @@
           <div id="foto" class="aoLado">
             <div id="zoom">
               <?php
-                $id = (int)$_GET['id'];
+                error_reporting(E_ERROR);
                 $sql = "select * from tbprodutos where id = $id";
                 $dados = mysql_fetch_assoc(mysql_query($sql));
               ?>

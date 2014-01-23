@@ -770,3 +770,19 @@ float: right;
 bottom: 300px;
 left: 10px;
 }
+
+.carregando{
+	display:none;
+	padding-top:10px;
+	text-align:center !important;
+	padding-bottom:32px;
+}
+.imgCarregando{
+	width:50px;
+	height:auto;
+}
+.carregando p{
+	margin-bottom:0;
+	color:#000;
+	font-weight:bold;
+}
