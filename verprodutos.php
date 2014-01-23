@@ -1,9 +1,3 @@
-    <?php include('header.php'); ?>
-
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
     <?php include('topo.php'); ?>
     <link rel="stylesheet" href="css/jquery.bxslider.css" />
     <div class="container">
@@ -12,18 +6,31 @@
         <div id="fotoInformacoes" class="larguraTotal">
           <div id="foto" class="aoLado">
             <div id="zoom">
-              <img src="painel/arquivos/produtos/11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG">
+              <?php
+                $id = (int)$_GET['id'];
+                $sql = "select * from tbprodutos where id = $id";
+                $dados = mysql_fetch_assoc(mysql_query($sql));
+              ?>
+              <img src="<?php echo "painel/arquivos/produtos/".$dados['foto1'];?>">
             </div>
-            <div id="zoomhover" class="" style="background-image: url(http://rfcasaecia.com.br/painel/arquivos/produtos/11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG); background-position: 10% 69%;"><img src="painel/arquivos/produtos/11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG" style="display: none;"></div>
+            <div id="zoomhover" class="" style="background-image: url(<?php echo "painel/arquivos/produtos/".$dados['foto1'];?>); background-position: 10% 69%;"><img src="<?php echo "painel/arquivos/produtos/".$dados['foto1'];?>"></div>
             <div id="miniaturas">
-              <img src="painel/arquivos/produtos/_miniaturas/11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG" name="img1" alt="Kit GLEN - 100% ALGODÃO PERCAL 200 FIOS"><img src="painel/arquivos/produtos/11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG" id="img1" style="display: none;">       </div>
+              <?php
+              for($i = 1; $i <= 5; $i ++){
+                if($dados["foto$i"] != "" && $dados["foto$i"] != null){
+                  echo "<img src='painel/arquivos/produtos/_miniaturas/".$dados["foto$i"]."' name='img$i' alt='".utf8_encode($dados['nome'])."' />";
+                  echo "<img src='painel/arquivos/produtos/".$dados["foto$i"]."' id='img$i' style='display: none;'>";
+                } 
+              }
+              ?>
+            </div>
           </div>
           <div id="informacoes" class="aoLado">
             <form action="cart.php?type=add" method="post">
-              <input type="hidden" name="id" value="129">
-              <input type="hidden" name="nome" value="Kit GLEN - 100% ALGODÃO PERCAL 200 FIOS">
-              <input type="hidden" name="foto1" value="11bc8fe8a6b7ee0737bb939a722e58bfglen.JPG">
-            <h3 class="corTitulo">Kit GLEN - 100% ALGODÃO PERCAL 200 FIOS</h3>
+              <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
+              <input type="hidden" name="nome" value="<?php echo $dados['nome'];?>">
+              <input type="hidden" name="foto1" value="<?php echo $dados['foto1'];?>">
+            <h3 class="corTitulo"><?php echo utf8_encode($dados['nome']);?></h3>
             <div id="precos">
 
             <div class="pull-right" style="margin-top: 15px;">
@@ -54,7 +61,7 @@
             </span>
           </div>
           <div class="conteudoAba">
-            <p></p><div style="font-family: Arial, Helvetica, sans-serif !important; font-size: 13px; line-height: 1.5em !important;">Kit Solteiro 6 Peças</div><div style="font-family: Arial, Helvetica, sans-serif !important; font-size: 13px; line-height: 1.5em !important;">1 Colcha | 1 Porta Travesseiro</div><div style="font-family: Arial, Helvetica, sans-serif !important; font-size: 13px; line-height: 1.5em !important;">1 Almofada | 1 Refil Almofada</div><div style="font-family: Arial, Helvetica, sans-serif !important; font-size: 13px; line-height: 1.5em !important;">1 Rolo | 1 Refil Rolo</div><div style="font-family: Arial, Helvetica, sans-serif !important; font-size: 13px; line-height: 1.5em !important;"><br></div><div><font face="Arial, Helvetica, sans-serif"><span style="font-size: 12.727272033691406px; line-height: 19.488636016845703px;">Roupa de Cama Solteiro 3 Peças</span></font><br></div><p></p>
+            <div><?php echo utf8_encode($dados['descricao']);?></div>
           </div>
           <div class="bottomAba">
             <span class="voltarTopo">
@@ -71,39 +78,19 @@
           </div>
           <div class="abaProdutosRelacionados conteudoAba"><div class="produtoRelacionado">
                 <ul class="bxslider">
+                  <?php
+                    $sqlProdutosRelacionados = "select * from tbprodutos where id <> $id and id_subcategoria = ".$dados['id_subcategoria'];
+                    $result = mysql_query($sqlProdutosRelacionados);
+                    echo $sqlProdutosRelacionados;
+                    while ($dados2 = mysql_fetch_array($result)) {
+                    ?>
                   <li>
-                    <a href="verproduto.php?id=92">
-                      <img src="painel/arquivos/produtos/_miniaturas/1e43695164658f22b8ce66f73ddc809apietro.JPG" alt="Cole��o Pietro - Percal 230 Fios - Xadrez Fio Tinto">
+                    <a href="verprodutos.php?id=<?php echo $dados2['id'];?>">
+                      <img src="<?php echo "painel/arquivos/produtos/".$dados2['foto1'];?>" alt="<?php echo utf8_encode($dados2['nome']);?>">
                     </a>
-                    <a href="verproduto.php?id=92" class="saibaMais">Saiba Mais</a>
+                    <a href="verprodutos.php?id=<?php echo $dados2['id'];?>" class="saibaMais">Saiba Mais</a>
                   </li>
-                  <li>
-                    <a href="verproduto.php?id=92">
-                      <img src="painel/arquivos/produtos/_miniaturas/1e43695164658f22b8ce66f73ddc809apietro.JPG" alt="Cole��o Pietro - Percal 230 Fios - Xadrez Fio Tinto">
-                    </a>
-                    <a href="verproduto.php?id=92" class="saibaMais">Saiba Mais</a>
-                  </li>
-                  <li>
-                    <a href="verproduto.php?id=92">
-                      <img src="painel/arquivos/produtos/_miniaturas/1e43695164658f22b8ce66f73ddc809apietro.JPG" alt="Cole��o Pietro - Percal 230 Fios - Xadrez Fio Tinto">
-                    </a>
-
-                    <a href="verproduto.php?id=92" class="saibaMais">Saiba Mais</a>
-                  </li>
-                  <li>
-                    <a href="verproduto.php?id=92">
-                      <img src="painel/arquivos/produtos/_miniaturas/1e43695164658f22b8ce66f73ddc809apietro.JPG" alt="Cole��o Pietro - Percal 230 Fios - Xadrez Fio Tinto">
-                    </a>
-         
-                    <a href="verproduto.php?id=92" class="saibaMais">Saiba Mais</a>
-                  </li>
-                  <li>
-                    <a href="verproduto.php?id=92">
-                      <img src="painel/arquivos/produtos/_miniaturas/1e43695164658f22b8ce66f73ddc809apietro.JPG" alt="Cole��o Pietro - Percal 230 Fios - Xadrez Fio Tinto">
-                    </a>
-            
-                    <a href="verproduto.php?id=92" class="saibaMais">Saiba Mais</a>
-                  </li>
+                  <?php } ?>
                 </ul>
               </div></div>
           </div>
@@ -164,5 +151,6 @@
       });
     })
     </script>
+    <script type="text/javascript" src="zoom/js/jquery.zoom.js"></script>
     </body>
 </html>

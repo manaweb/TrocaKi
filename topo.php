@@ -1,3 +1,32 @@
+<?php
+      include("php/config/config.php");
+      include("painel/includes/BancoDeDados.php");
+      $conexao = db_conectar();
+    ?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TrocaKi</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="fonts/century_gothic/stylesheet.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/jcarousel.responsive.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="zoom/css/zoom.css">
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+      <!--[if lt IE 7]>
+          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]-->
 <header>
       <div class="section">
         <div class="container navbar">
@@ -44,16 +73,16 @@
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">
+                      <a href="servicos.php">
                         serviços
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0);">
+                      <a href="contato.php">
                         contato
                       </a>
                     </li>
-                    <li class="pull-right">
+                    <li>
                       <a href="javascript:void(0);">
                         <img src="img/facebook-icon.png">
                       </a>
@@ -66,34 +95,49 @@
           </div>
         </div>
       </header>
-      <!-- Main jumbotron for a primary marketing message or call to action -->
+
       <div class="jumbotron">
         <div class="container">
           <div id="carousel-trocaki" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-trocaki" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-trocaki" data-slide-to="1"></li>
-            </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-              <div class="item active">
-                <div style="width: 100%;height: 439px;background: url(img/carro.jpg) 50% 50%;"></div>
-                <div class="carousel-caption">
-                  Teste
-                </div>
-              </div>
-               <div class="item">
-                <div style="width: 100%;height: 439px;background: url(img/carro.jpg) 50% 50%;"></div>
-                <div class="carousel-caption">
-                  Teste2
-                </div>
-              </div>
+              
+              <?php
+                $sql = "select * from tbpublicidade order by id_publicidade desc";
+                $result = mysql_query($sql);
+                $qtd = mysql_num_rows($result);
+                $html = "";
+                $active = "active";
+                while($dadosBanner = mysql_fetch_assoc($result)){
+                  $link = $dadosBanner['destino'] == "" ? "" : "href='".$dadosBanner['destino']."' target='_blank'";
+                  $html .= 
+                  '<div class="item '.$active.'">
+                    <div style="width: 100%;height: 439px;background: url(painel/arquivos/banner/'.$dadosBanner['arquivo'].') center no-repeat;"></div>
+                    <div class="carousel-caption">
+                      <a '.$link.'>'.$dadosBanner['titulo'].'</a>
+                    </div>
+                  </div>';
+                  $active = "";
+                }
+                echo $html;
+              ?>
             </div>
+            <ol class="carousel-indicators">
+            <?php
+              
+              $active = 'class="active"';
+              for($i = 0; $i < $qtd; $i++){
+                echo '<li data-target="#carousel-trocaki" data-slide-to="'.$i.'" '.$active.'></li>';
+                $active = "";
+              }
+            ?>
+          </ol>
           </div>
         </div>
       </div>
+
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
@@ -105,4 +149,3 @@
             <li><img src="img/cofap.png"/></li>
           </ul>
         </div>
-    </div>
