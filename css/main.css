@@ -142,10 +142,16 @@ body{
    ========================================================================== */
 
 .carousel{
-	overflow: hidden;
+	overflow: visible;
 }
-.carousel-indicators{
-	bottom: -50px;
+.carousel-inner {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.carousel-indicators {
+    top: 430px;
 }
 .carousel-indicators li{
 	border-radius: 3px !important;
@@ -1023,4 +1029,18 @@ th, td{
 	text-align: center !important;
 	font-size: 15px;
 	display: none;
+}
+
+/*Fix para na página de produtos Internet Explorer*/
+.produtos li{
+	background: #000;
+}
+.produtos li:hover {
+	background: url(../img/plus.png) 50% 40% no-repeat #000 !important;
+}
+.produtos li:hover h3{
+	visibility: visible;
+}
+.produtos img:hover{
+	filter: alpha(opacity=25);
 }
