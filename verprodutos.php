@@ -1,6 +1,6 @@
     <?php
-    $id = 0;
-    if(isset($_GET['id']) && is_int((int)$_GET['id']) && $_GET['id'] > 0){
+    $id = intval($_GET['id']);
+    if(isset($id) && $id > 0) {
       $id = $_GET['id'];
     }else{
       header("Location: index.php");
