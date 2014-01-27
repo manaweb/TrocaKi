@@ -95,8 +95,8 @@
 			<p class="total">Total <input type="text" value="" class="totalGeral"/></p>
 		</div>-->
 		<div class="clear fecharPedido">
-			<a class="escolherMais" href="produtos.php">Escolher mais produtos</a>
-			<a class="btnFinalizar bannerCorpo_2-1" href="javascript:void(0)">Finalizar Orçamento</a>
+			<a class="btn btn-primary btn-lg" href="produtos.php">Escolher mais produtos</a>
+			<a class="btnFinalizar btn btn-primary btn-lg" href="javascript:void(0)">Finalizar Orçamento</a>
 		</div>
 		<div class="clear"></div>
 	</div>
