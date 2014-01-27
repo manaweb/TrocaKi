@@ -11,7 +11,7 @@
 	$html = "";
 	while ($dados2 = mysql_fetch_array($result)) {
 		$html.= "<li id='".$dados2['id']."' class='produto'>
-			<a href='verproduto.php?id=".$dados2['id']."'>
+			<a href='verprodutos.php?id=".$dados2['id']."'>
 				<h3 class='titulo'>".utf8_encode($dados2['nome'])."</h3>
 			</a>
 			<img src='painel/arquivos/produtos/_miniaturas/".$dados2['foto1']."' alt='".utf8_encode($dados2['nome'])."'/>
