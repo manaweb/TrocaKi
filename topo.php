@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="zoom/css/zoom.css">
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+            <link rel="stylesheet" href="css/main_ie.css">
         <![endif]-->
     </head>
     <body>
