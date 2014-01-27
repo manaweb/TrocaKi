@@ -902,11 +902,9 @@ th, td{
 	vertical-align: baseline;
 	font-size: 17px;
 	font-weight: 200;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 .conteudoCadastrar h3 {
 	color: #000;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 	font-size: 32px;
 	font-weight: 200;
 	cursor: default;
@@ -915,34 +913,17 @@ th, td{
 	font-weight: 200;
 }
 .conteudoCadastrar {
-text-align: center !important;
+	text-align: center !important;
 }
-
+.inputao {
+	padding-right: 108px;
+	margin-bottom: 15px;
+}
 .formCadastrar{
 	text-align: center;
 } 
-
-.formCadastrar .emailValidar{
-	width: 70%;
-	padding-left: 26px;
-	padding-right: 100px;
-	height: 45px !important;
-	margin-top: 10px;
-	border-radius: 5px;
-	border: 1px solid #CCC;
-	color: #000;
-	font-size: 20px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
-	height: 27px;
-	padding-left: 5px;
-}
-.continuar {
-	width: 80px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
-	position: absolute;
-	margin-top: 10px;
-	margin-left: -81px;
-	height: 44px;
+.formCadastrar .btn-primary {
+	margin-left: -188px;
 	color: #000;
 	color: #FFF;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -958,6 +939,7 @@ text-align: center !important;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	border-radius: 5px;
+	position: absolute;
 }
 
 .infoCad{
@@ -972,9 +954,6 @@ text-align: center !important;
 	position: relative;
 	overflow: hidden;
 	background: url(../img/cadeado.png) right no-repeat #FCFCFC;
-}
-.infoCad *{
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 .infoCad p{
 	color: #468847;
@@ -991,4 +970,57 @@ text-align: center !important;
 .infoCad li{
 	list-style: url(../img/icon-ok.png);
 	color: #888;
+}
+.pedido *{
+	color: #000;
+	text-align: left;
+}
+.pedido > p{
+	font-weight: bold;
+}
+.cabecalhoOrcamento{
+	background-color: #F0F0F0;
+	padding: 8px 15px;
+	font-weight: bold !important;
+	margin: 5px 0;
+}
+.tdProduto{
+	margin-bottom: 30px;
+}
+.miniCadastro{
+	width: 410px;
+	margin-left: 30px;
+}
+.miniCadastro *{
+	color: #999999;
+	text-align: left;
+}
+.lblEmail{
+	font-size: 13px;
+}
+.miniCadastro fieldset{
+	border: 4px solid #E5E5E5;
+	border-radius: 7px;
+}
+.fazerPedido{
+	margin-top: 25px;
+	text-align: center;
+	color: #FFF !important;
+	cursor: pointer;
+}
+.lblSubmit{
+	width: 100%;
+	text-align: center;
+}
+.produto{
+	margin-top: 10px;
+}
+.sucessoEnvio {
+	background-color: #BDDE9C;
+	padding: 10px;
+	font-weight: bold;
+	color: #666 !important;
+	text-align: center !important;
+	font-size: 15px;
+	display: none;
 }

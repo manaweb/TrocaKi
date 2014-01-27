@@ -7,10 +7,15 @@
 
 <div class="container conteudoCadastrar">
 	<h3>Para finalizar a compra, informe seu e-mail.<span>Rápido. Fácil. Seguro</span></h3>
-	<form method="post" action="cadastro.php" class="formCadastrar">
+	<form method="post" action="cadastro.php" class="formCadastrar form" role="form">
 		<input type="hidden" name="id" value="<?=(isset($_GET['id']) ? $_GET['id'] : "")?>" />
 		<input type="hidden" name="qtd" value="<?=(isset($_GET['qtd']) ? $_GET['qtd'] : "")?>" />
-		<input type="email" name="email" class="emailValidar" placeholder="seu@email.com" required /><input type="submit" class="continuar" value="Continuar" />
+		<div class="form-group col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+			<input type="email" name="email" class="form-control inputao" placeholder="seu@email.com" required />
+		</div>
+		<div class="form-group" class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+			<input type="submit" class="btn btn-primary btn-md" value="Continuar" />
+		</div>
 	</form>
 	<br />
 	<div class="infoCad">
