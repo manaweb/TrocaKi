@@ -90,7 +90,10 @@
           </div>
         </div>
         </div>
-        <?php include_once('rodape.php'); ?>
+        <?php 
+          $page = "index";
+          include_once('rodape.php'); 
+        ?>
         <script src="js/vendor/jquery-1.10.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
