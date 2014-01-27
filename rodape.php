@@ -63,6 +63,15 @@
 
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
+      <?php
+        if(!isset($page) || $page != 'index'){?>
+          <script>
+            $(function(){
+              $("html, body").animate({scrollTop: '600px'},500);
+            })
+          </script> 
+          
+      <?php } ?>
       <script>
           var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
