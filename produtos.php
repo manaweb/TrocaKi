@@ -7,12 +7,14 @@
         <br>
         <div class="input-group">
           <!-- /input-group -->
-          <input type="text" name="pesquisa" id="txtSearch" class="form-control" placeholder="Pesquisar" value="">
-          <span class="input-group-btn">
-            <button class="btn btn-primary buscar" id="btn-search" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>
+          <form method="get" action="produtos.php" class="input-group">
+            <input type="text" name="pesquisar" id="txtSearch" class="form-control" placeholder="Pesquisar" value="<?php echo isset($_GET['pesquisar']) ? $_GET['pesquisar'] : ""; ?>">
+            <span class="input-group-btn">
+              <button class="btn btn-primary buscar" id="btn-search" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </form>
         </div>
         <!-- /input-group -->
         <ul class="bullet menu-bar">
