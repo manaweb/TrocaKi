@@ -163,6 +163,13 @@ body{
 	border-color: #FF8F0E;
 }
 
+.carousel-caption a{
+	color: #FFF !important;
+}
+.carousel-caption a:hover{
+	text-decoration: none;
+}
+
 /* ==========================================================================
    jcarousel - carousel de produtos
    ========================================================================== */
