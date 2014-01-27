@@ -39,6 +39,22 @@
               <input type="hidden" name="foto1" value="<?php echo $dados['foto1'];?>">
             <h3 class="corTitulo"><?php echo utf8_encode($dados['nome']);?></h3>
             <div id="precos">
+              <div id="parcelas" class="pull-left">
+              <?php
+                if($dados['variacoes'] != "" && $dados['variacoes'] != null){
+                  $checkbox = explode(';',$dados['variacoes']);
+                  for($i = 0; $i < sizeof($checkbox); $i++){
+                    $idCheck = str_replace(" ","",$checkbox[$i]);
+                    $sqlVariacao = "select * from tbprodutos_variacoes where id=".$idCheck;
+                    $dadosVariacao = mysql_fetch_array(mysql_query($sqlVariacao));
+                    echo "<p><label><input type='radio' checked name='variacao' value='".$dadosVariacao['variacao']."' />".$dadosVariacao['variacao']."</label></p>";
+                  }
+                }else{
+                  echo "<input type='hidden' name='variacao' value='Único' />";
+                }
+
+              ?>
+            </div>
 
             <div class="pull-right" style="margin-top: 15px;">
               <span class="forma">Formas de Pagamento</span><br>
