@@ -10,7 +10,7 @@
 	<form method="post" action="cadastro.php" class="formCadastrar">
 		<input type="hidden" name="id" value="<?=(isset($_GET['id']) ? $_GET['id'] : "")?>" />
 		<input type="hidden" name="qtd" value="<?=(isset($_GET['qtd']) ? $_GET['qtd'] : "")?>" />
-		<input type="text" name="email" class="emailValidar" placeholder="seu@email.com" required /><input type="submit" class="continuar" value="Continuar" />
+		<input type="email" name="email" class="emailValidar" placeholder="seu@email.com" required /><input type="submit" class="continuar" value="Continuar" />
 	</form>
 	<br />
 	<div class="infoCad">
