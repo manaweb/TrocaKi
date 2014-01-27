@@ -786,3 +786,6 @@ left: 10px;
 	color:#000;
 	font-weight:bold;
 }
+.colapsed{
+	display: none;
+}

@@ -29,7 +29,7 @@
               $qq = mysql_query("SELECT * FROM tbprodutos_subcategorias WHERE categoria = '$id'");
               while ($dados2 = mysql_fetch_assoc($qq))
                 $final .= '<li id="'.$dados2['id_subcategoria'].'"><a href="produtos.php?subcategoria='.$dados2['id_subcategoria'].'">'.utf8_encode($dados2['subcategoria']).'</a></li>';
-              $ul .= '<ul class="bullet"><li><h3><a href="javascript:void(0)" class="show-hide">'.utf8_encode($dados['categoria']).'</a></h3><ul>'.$final.'</ul></li></ul>';
+              $ul .= '<ul class="bullet"><li><h3><a href="javascript:void(0)" class="show-hide">'.utf8_encode($dados['categoria']).'</a></h3><ul class="colapsed">'.$final.'</ul></li></ul>';
               
             }
             echo $ul;
@@ -89,7 +89,7 @@
           carregaProdutos(x); 
         }
       });
-      
+
           
       
       $('.show-hide').click(function() {
