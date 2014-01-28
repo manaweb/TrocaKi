@@ -1043,3 +1043,11 @@ th, td{
 	margin-top: 8px;
 	margin-left: -20px;
 }
+.carousel-inner {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.carousel-indicators {
+    top: 430px;
+}
