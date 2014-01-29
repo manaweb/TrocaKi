@@ -79,14 +79,14 @@
             <h4>Atendimento por email</h4>
             <span class="icone"></span>
             <p>Mande uma mensagem para a nos e tire suas dúvidas, conheça os lançamentos e envie comentários ou sugestões.</p>
-            <a href="javascript:void(0)" class="btn btn-warning pull-right">CLIQUE E TIRE SUAS DÚVIDAS <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="mailto:contato@grupotrocaki.com.br" class="btn btn-warning pull-right">CLIQUE E TIRE SUAS DÚVIDAS <span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <h4>Atendimento</h4>
             <span class="icone"></span>
             <p class="telefone">(16) 3202-4399</p>
-            <a href="javascript:void(0)" class="btn btn-warning pull-right btnLink">CLIQUE E FALE AGORA <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="contato.php" class="btn btn-warning pull-right btnLink">CLIQUE E FALE AGORA <span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
         </div>
@@ -94,20 +94,7 @@
           $page = "index";
           include_once('rodape.php'); 
         ?>
-        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
         <script src="js/jquery.jcarousel.min.js"></script>
         <script src="js/jcarousel.responsive.js"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='http://www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

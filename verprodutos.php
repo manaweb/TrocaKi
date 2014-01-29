@@ -14,7 +14,7 @@
           <div id="foto" class="aoLado">
             <div id="zoom">
               <?php
-                error_reporting(E_ERROR);
+                
                 $sql = "select * from tbprodutos where id = $id";
                 $dados = mysql_fetch_assoc(mysql_query($sql));
               ?>
@@ -104,12 +104,11 @@
                   <?php
                     $sqlProdutosRelacionados = "select * from tbprodutos where id <> $id and id_subcategoria = ".$dados['id_subcategoria'];
                     $result = mysql_query($sqlProdutosRelacionados);
-                    echo $sqlProdutosRelacionados;
                     while ($dados2 = mysql_fetch_array($result)) {
                     ?>
                   <li>
                     <a href="verprodutos.php?id=<?php echo $dados2['id'];?>">
-                      <img src="<?php echo "painel/arquivos/produtos/".$dados2['foto1'];?>" alt="<?php echo utf8_encode($dados2['nome']);?>">
+                      <img src="<?php echo "painel/arquivos/produtos/_miniaturas/".$dados2['foto1'];?>" alt="<?php echo utf8_encode($dados2['nome']);?>">
                     </a>
                     <a href="verprodutos.php?id=<?php echo $dados2['id'];?>" class="saibaMais">Saiba Mais</a>
                   </li>

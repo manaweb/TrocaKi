@@ -5,7 +5,7 @@
 	$lastId = $_GET['lastId'];
 	$subcategoria = isset($_GET['subcategoria']) ? "and id_subcategoria = ".$_GET['subcategoria'] : "";
 	$pesquisar = isset($_GET['pesquisar']) ? "and (upper(nome) like upper('%".$_GET['pesquisar']."%') or upper(descricao) like upper('%".$_GET['pesquisar']."%'))" : ""; 
-	$sql = ("SELECT p.* from tbprodutos p");
+	$sql = "SELECT p.* from tbprodutos p";
 	$sqlProdutosRelacionados = "select * from tbprodutos where id < $lastId $subcategoria $pesquisar order by id desc limit 8";
 	$result = mysql_query($sqlProdutosRelacionados);
 	$html = "";
