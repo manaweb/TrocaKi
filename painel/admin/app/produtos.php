@@ -1,4 +1,4 @@
-<? 
+<?php
 	define('ID_MODULO',0,true);
 	include("../../../php/config/config.php");
 	include("../includes/Config.php");

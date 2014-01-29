@@ -46,7 +46,7 @@
 		array('text',		'URL',			'destino',			'200',			'',					'',											''),
 		//array('text',		'Largura X:',	'dimx',				'100',			'',					'pixels',									''),
 		//array('text',		'Largura Y:',	'dimy',				'100',			'',					'pixels',									''),
-		array('file',		'Arquivo',		'arquivo',			'350',		   	1,					'Largura: 940px  Altura: 439px',			''),
+		array('file',		'Arquivo',		'arquivo',			'350',		   	1,					'Largura: 1920px ou maior X Altura: 439px',			''),
 	);
 
 

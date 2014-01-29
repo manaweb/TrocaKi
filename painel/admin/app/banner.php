@@ -14,7 +14,7 @@
 		'urlfixo'=>'', 
 		'pasta'=>'banner',
 		'imagem'=>array(
-			'x'=>940, 'y'=>439, 'corte'=>0, 
+			'x'=>1920, 'y'=>439, 'corte'=>1, 
 			'mini'=>array(
 				'x'=>100, 'y'=>100, 'corte'=>0
 			)

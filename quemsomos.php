@@ -6,7 +6,7 @@
        		$sql = "SELECT * FROM historico limit 1";
        		$result = mysql_query($sql);
        		$dados = mysql_fetch_assoc($result);
-       		echo $dados['texto'];
+       		echo utf8_encode($dados['texto']);
        	?>
        </p>
     </div>

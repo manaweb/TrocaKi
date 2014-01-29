@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('.carousel').carousel();
+	$('#carousel').carousel();
 
     $('#btnBuscarCep').click(function() {
         $.blockUI({

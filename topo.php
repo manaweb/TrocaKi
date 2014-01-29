@@ -98,7 +98,6 @@
       </header>
 
       <div class="jumbotron">
-        <div class="container">
           <div id="carousel-trocaki" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
 
@@ -106,19 +105,15 @@
             <div class="carousel-inner">
               
               <?php
-                $sql = "select * from tbpublicidade order by id_publicidade desc";
+                $sql = "select arquivo from tbpublicidade order by id_publicidade desc";
                 $result = mysql_query($sql);
                 $qtd = mysql_num_rows($result);
                 $html = "";
                 $active = "active";
                 while($dadosBanner = mysql_fetch_assoc($result)){
-                  $link = $dadosBanner['destino'] == "" ? "" : "href='".$dadosBanner['destino']."' target='_blank'";
                   $html .= 
                   '<div class="item '.$active.'">
                     <div style="width: 100%;height: 439px;background: url(painel/arquivos/banner/'.$dadosBanner['arquivo'].') center no-repeat;"></div>
-                    <div class="carousel-caption">
-                      <a '.$link.'>'.$dadosBanner['titulo'].'</a>
-                    </div>
                   </div>';
                   $active = "";
                 }
@@ -136,7 +131,6 @@
             ?>
           </ol>
           </div>
-        </div>
       </div>
 
       <div class="container">
