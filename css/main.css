@@ -45,7 +45,7 @@
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 * {
-	font-family: 'century_gothicregular','Glyphicons Halflings','teste' !important;
+	font-family: 'century_gothicregular','Glyphicons Halflings' !important;
 }
 body{
 	overflow-x: hidden;
