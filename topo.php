@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="fonts/century_gothic/stylesheet.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/scroll.css">
         <link rel="stylesheet" href="css/jcarousel.responsive.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="zoom/css/zoom.css">
