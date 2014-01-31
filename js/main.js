@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
 	$('#carousel').carousel();
+    $('.scroll-pane').jScrollPane({autoReinitialise: true});
+
 
     $('#btnBuscarCep').click(function() {
         $.blockUI({

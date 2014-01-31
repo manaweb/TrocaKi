@@ -2,6 +2,21 @@
    Bootstrap changes stylesheet
    ========================================================================== */
 
+/* Scroll das modals */
+.modal-content::-webkit-scrollbar {
+	width: 12px;  
+}  
+.modal-content::-webkit-scrollbar-track {  
+	background-color: #eaeaea;
+	border-left: 1px solid #ccc;
+}  
+.modal-content::-webkit-scrollbar-thumb {
+	background-color: #E43707;  
+}  
+.modal-content::-webkit-scrollbar-thumb:hover {
+	background-color: #E43707;  
+}
+
 .container {
   max-width: none !important;
   width: 970px;
@@ -1052,3 +1067,80 @@ th, td{
 .carousel-indicators {
     top: 430px;
 }
+/*página de serviços*/
+.item-servico {
+	height: 118px;
+	margin: 16px;
+	padding: 0;
+	text-align: center;
+	line-height: 118px;
+}
+.item-servico a{
+	width: 100%;
+	padding: 20px 5px 20px 5px;
+	text-align: center;
+	display: table;
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+	font-weight: bold;
+}
+.icon-servicos {
+	width: 55px;
+	height: 42px;
+	background: url(../img/icons-servicos.png) center no-repeat;
+	margin: 0 auto;
+	display: block;
+}
+/* Icones serviços */
+.icon-servicos.freio {background-position: -60px 0px;}
+.icon-servicos.ar {background-position: -170px 0px;}
+.icon-servicos.balanceamento {width: 50px;background-position: -305px 0px;}
+.icon-servicos.pneu {width: 50px;background-position: -425px 0px;}
+.icon-servicos.refrigeracao {width: 54px;background-position: -550px 0px;}
+.icon-servicos.suspensao {background-position: -55px -44px;}
+.icon-servicos.eletrica {background-position: -170px -44px;}
+.icon-servicos.mecanica {width: 53px;background-position: -305px -44px;}
+.icon-servicos.alinhamento {background-position: -425px -44px;}
+/* Icones serviços hover */
+.item-servico a:hover .icon-servicos.freio {background-position: 0px -1px;}
+.item-servico a:hover .icon-servicos.ar {background-position: -119px 0px;}
+.item-servico a:hover .icon-servicos.balanceamento {background-position: -254px 0px;}
+.item-servico a:hover .icon-servicos.pneu {background-position: -381px 0px;}
+.item-servico a:hover .icon-servicos.refrigeracao {background-position: -500px 0px;}
+.item-servico a:hover .icon-servicos.suspensao {background-position: -3px -44px;}
+.item-servico a:hover .icon-servicos.eletrica {background-position: -118px -44px;}
+.item-servico a:hover .icon-servicos.mecanica {background-position: -253px -44px;}
+.item-servico a:hover .icon-servicos.alinhamento {background-position: -373px -44px;}
+/* Estilização das modals */
+.scroll-pane {
+	width: 540px;
+	height: 400px;
+	overflow: auto;
+}
+.modal-dialog .modal-close {
+	width: 35px;
+	height: 35px;
+	top: 25px;
+	background-color: rgb(228, 55, 7);
+	display: block;
+	color: #FFF;
+	font-size: 25px;
+	text-align: center;
+	position: relative;
+}
+.modal-content {
+	margin-top: 80px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
+	-ms-box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
+	-o-box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
+	border: 8px solid black;
+}
+.modal-dialog .modal-close:hover, .modal-dialog .modal-close:active {text-decoration: none};
