@@ -58,112 +58,33 @@
         </a>
       </div>
       <!-- Modal -->
-      <div class="modal fade" id="freio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <?php
+        include_once('php/config/config.php');
+        include_once('painel/includes/BancoDeDados.php');
+
+        $db = db_conectar();
+        $query = mysql_query("SELECT tipo,texto FROM servicos");
+        while($result = mysql_fetch_assoc($query)):
+      ?>
+      <div class="modal fade" id="<?=$result['tipo']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
           <div class="modal-content">
             <div class="modal-body">
               <div class="scroll-pane">
                 <p>
-                  asdasdasdadsasdasdasdadsasdasdasdadsasdas<br>dasdadsasdasdasdadsasdasdasd<br>adsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasda<br>sdadsasdasdasdadsasda<br>sdasdadsasd<br>asdasdadsasdasdasdadsasda<br>sdasdadsasdasdasdadsas<br>dasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasd<br>asdadsasdasdasdadsasdasdasdadsasdasdasdadsasdas<br>dasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdas<br>dadsasdasdasdad<br>sasdasdasdadsasdasdasdadsasdasd<br>asdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasdasdadsasda<br>sdasdadsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasda<br>sdadsasdasdasdadsasdasdasdadsasdasdasdads
-                </p>
-                 <p>
-                  asdasdasdadsasdasdasdadsasdasdasdadsasdas<br>dasdadsasdasdasdadsasdasdasd<br>adsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasda<br>sdadsasdasdasdadsasda<br>sdasdadsasd<br>asdasdadsasdasdasdadsasda<br>sdasdadsasdasdasdadsas<br>dasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasd<br>asdadsasdasdasdadsasdasdasdadsasdasdasdadsasdas<br>dasdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdas<br>dadsasdasdasdad<br>sasdasdasdadsasdasdasdadsasdasd<br>asdadsasdasdasdadsasdasdasdadsasdasdasdadsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasdasdadsasda<br>sdasdadsasdasdasdadsa<br>sdasdasdadsasdasdasdadsasdasda<br>sdadsasdasdasdadsasdasdasdadsasdasdasdads
+                  <?=utf8_encode($result['texto'])?>
                 </p>
               </div>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="ar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-          <div class="modal-content">
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="balanceamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="pneu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="refrigeracao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="suspensao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="eletrica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="mecanica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-      <!-- Modal -->
-      <div class="modal fade" id="alinhamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
-            <div class="modal-body">
-              ...
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-    </div>
+      <?php 
+        endwhile;
+        mysql_free_result($query);
+        @mysql_close($db);
+      ?>
   </div>
 <?php include('rodape.php'); ?>
 </body>
