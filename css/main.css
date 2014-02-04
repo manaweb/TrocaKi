@@ -1143,4 +1143,56 @@ th, td{
 	box-shadow: 1px 1px 30px 0px rgba(50, 50, 50, 0.75);
 	border: 8px solid black;
 }
-.modal-dialog .modal-close:hover, .modal-dialog .modal-close:active {text-decoration: none};
+.modal-dialog .modal-close:hover, .modal-dialog .modal-close:active {text-decoration: none}
+.contato {
+	margin-top: 35px;
+	margin-bottom: 50px;
+}
+.contato label {
+	color: #444;
+	font-size: 23px;
+	font-weight: lighter;
+	letter-spacing: -1px;
+}
+.contato .form-control {height: 45px;}
+.contato select.form-control {
+	background: url(../img/dropdown.png) no-repeat center right;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+.contato textarea.form-control {
+	min-height: 150px;
+}
+.table-infos {
+	color: white;
+	background-color: #fc6428;
+}
+.table-infos a, .table-infos a:hover {color: white;text-decoration: none}
+.table-infos .glyphicon {
+	padding-top: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 6px;
+	webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	border-radius: 50px;
+	background-color: #4C341B;
+	color: white;
+	font-size: 20px;
+	display: inline-block;
+}
+.table-infos li {
+	padding: 15px;
+	font-size: 18px;
+}
+.table-infos li h2 {margin: 0;}
+.table-infos li p {
+	padding-left: 50px;
+	display: block;
+}
+.table-infos li:hover .glyphicon {background-color: #CA4506;}
+.contato .modal-dialog {width: 940px;}

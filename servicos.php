@@ -1,6 +1,6 @@
 <?php include('topo.php'); ?>
   <div class="container">
-    <h2>serviços</h2>
+    <h2>SERVIÇOS</h2>
     <div class="row">
 
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 item-servico">
