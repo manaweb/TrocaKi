@@ -16,7 +16,7 @@
                               <li>
                                 <div class='contentItem'>
                                   <a href='verprodutos.php?id=".$dadosProdutos['id']."'>
-                                    <img src='painel/arquivos/produtos/".$dadosProdutos['foto1']."' alt='".$dadosProdutos['nome']."'>
+                                    <img src='painel/arquivos/produtos/_miniaturas/".$dadosProdutos['foto1']."' alt='".$dadosProdutos['nome']."'>
                                   </a>
                                 </div>
                               </li>";
