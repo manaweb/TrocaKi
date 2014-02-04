@@ -18,12 +18,12 @@ class ActionCheckout {
 		try {
 			$mail = new PHPMailer(true);
 			$mail->isSMTP();
-			$mail->SMTPDebug  = 2;                   
+			$mail->SMTPDebug  = 0;                   
 			$mail->SMTPAuth   = true;
 			$mail->Host       = "localhost";      
 			$mail->Port       = 587;                   
-			$mail->Username   = "rf@rfcasaecia.com.br";  
-			$mail->Password   = "rfcasa001";            
+			$mail->Username   = "trocaki@grupotrocaki.com.br";  
+			$mail->Password   = "trocaki001";            
 			$mail->From = $checkOpts['remetente'];
 			$mail->Sender = $checkOpts['remetente'];
 			$mail->FromName = $checkOpts['nomeRemetente'];
@@ -36,9 +36,9 @@ class ActionCheckout {
 			$mail->Body = utf8_decode($checkOpts['corpo']);
 			$mail->Send();
 		}catch(phpmailerException $e) {
-			echo $e->errorMessage();
+			echo $e->getCode();
 		}catch(Exception $e) {
-			echo $e->getMessage();
+			echo $e->getCode();
 		}
 	}
 

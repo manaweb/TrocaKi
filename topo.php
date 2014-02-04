@@ -10,6 +10,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <meta name="google-site-verification" content="3KHvxLTT2OqYpRX4E1ftcCGat_ak1S4OO3Si8clPm9o" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>TrocaKi</title>
         <meta name="description" content="">
