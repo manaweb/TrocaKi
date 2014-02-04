@@ -42,7 +42,7 @@
               </a>
               <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                 <address>
-                  Troca ki | Av. Prof. João Fiusa, 2080 | Jaboticabal | SP | Brasil - ©Todos Direitos Reservados
+                  Troca ki | Rua Monteiro Lobato, 987 | Jaboticabal | SP | Brasil - ©Todos Direitos Reservados
                 </address>
               </div>
             </div>

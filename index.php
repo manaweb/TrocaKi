@@ -85,7 +85,7 @@
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <h4>Atendimento</h4>
             <span class="icone"></span>
-            <p class="telefone">(16) 3202-4399</p>
+            <p class="telefone">(16) 3202-1178</p>
             <a href="contato.php" class="btn btn-warning pull-right btnLink">CLIQUE E FALE AGORA <span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>

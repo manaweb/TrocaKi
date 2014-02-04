@@ -45,13 +45,13 @@
               <li>
                 <a href="#">
                   <span class="glyphicon glyphicon-earphone pull-left"></span>
-                  <p>(16) 3202-8933</p>
+                  <p>(16) 3202-1178</p>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <span class="glyphicon glyphicon-map-marker pull-left"></span>
-                  <p>Rua Monteiro Lobato</p>
+                  <p>Rua Monteiro Lobato, 987, Jaboticabal - SP</p>
                 </a>
               </li>
             </ul>

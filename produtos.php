@@ -1,5 +1,5 @@
     <?php include('topo.php'); ?>
-    <div class="container">
+    <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
       <div id="menu-lateral" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <h3>
           <b>Ache o produto que deseja aqui.</b>
