@@ -101,7 +101,7 @@
               $('.boxContatos form').submit(function() {
                var papi = $(this);
                $('.btn-warning',papi).attr('disabled','disabled').text('Enviando...');
-                $.post('http://grupotrocaki.com.br/ajaxRetorno.php?type=2',$(this).serialize(),function(data) {
+                $.post('ajaxRetorno.php?type=2',$(this).serialize(),function(data) {
                     $('.btn-warning',papi).removeAttr('disabled').text('Enviado!');
                      setTimeout(function() {window.location = 'index.php'},3000);
                 });
