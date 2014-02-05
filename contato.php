@@ -73,7 +73,7 @@
               <a href="javascript:void(0);" class="modal-close pull-right" data-dismiss="modal" aria-hidden="true">&times;</a>
                 <div class="modal-content">
                   <div class="modal-body">
-                    <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Monteiro+Lobato,+987,+Jaboticabal+-+SP&amp;aq=&amp;sll=-21.257541,-48.324866&amp;sspn=0.036836,0.066047&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Rua+Monteiro+Lobato,+987,+S%C3%A3o+Paulo,+14870-410,+Brasil&amp;ll=-21.256742,-48.28208&amp;spn=0.047995,0.164709&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                    <div id="mapita" style="width: 100%;height: 500px;"></div>
                   </div>
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
@@ -83,9 +83,35 @@
       </div>
     </div>
     <?php include('rodape.php'); ?>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script src="js/maps.google.js"></script>
     <script>
+
+        $('.modal').on('shown.bs.modal',function() {
+          google.maps.event.trigger(map, "resize");
+        });
+
         $(document).ready(function () {
+          var myLatlng = new google.maps.LatLng(-21.25886,-48.323714);
+
+          var myOptions = {
+              zoom: 18,
+              center: myLatlng,
+              mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+
+          map = new google.maps.Map(document.getElementById('mapita'), myOptions);
+
+          var marker = new google.maps.Marker({
+             position: new google.maps.LatLng(-21.26018,-48.321675),
+             map: map,
+             draggable: false,
+             raiseOnDrag: false,
+             labelContent: "A",
+             labelAnchor: new google.maps.Point(3, 30),
+             labelInBackground: false
+           });
+
           var validator = $('.contato').validate({
             messages: {
               "nome": "",
@@ -95,6 +121,7 @@
               "departamento": ""
             }
           });
+
           $('form').submit(function() {
             if (!validator.valid()) {
               $('.alert').removeClass('alert-success').addClass('alert-danger').fadeIn('slow').html('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Campos inválidos:<br>');
@@ -104,7 +131,7 @@
               }
             }else {
               $('.btn-primary').attr('disabled','disabled').text('Enviando...');
-              $.post('http://grupotrocaki.com.br/ajaxRetorno.php?type=1',$(this).serialize(),function(data) {
+              $.post('ajaxRetorno.php?type=1',$(this).serialize(),function(data) {
                 if (data == '') {
                   $('.alert').removeClass('alert-danger').addClass('alert-success').fadeIn('slow').html('<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Formulário enviado com sucesso');
                    $('.btn-primary').removeAttr('disabled').text('Enviado!');
