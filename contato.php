@@ -8,7 +8,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
                   <div class="alert alert-danger alert-dismissable" style="display: none">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    Teste
+                    
                   </div>
                 </div>
                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-6">

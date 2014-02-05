@@ -49,31 +49,31 @@
 
             <form class="form-horizontal form-index" role="form">
               <div class="form-group">
-                <label for="txtNome" class="col-sm-4 control-label">NOME</label>
+                <label for="txtNome" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 control-label">NOME</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="txtNome" name="txtNome">
+                  <input type="text" class="form-control" id="txtNome" name="nome" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="txtTelefone" class="col-sm-4 control-label">TELEFONE</label>
+                <label for="txtTelefone" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 control-label">TELEFONE</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="txtTelefone" name="txtTelefone">
+                  <input type="text" class="form-control" id="txtTelefone" name="telefone" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="txtObjetivo" class="col-sm-4 control-label">OBJETIVO DO CONTATO</label>
-                <div class="col-sm-8">
-                  <textarea class="form-control" rows="3" resize="none" name="txtObejtivo" name="txtObjetivo"></textarea>
+                <label for="txtObjetivo" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 control-label">OBJETIVO DO CONTATO</label>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                  <textarea class="form-control" rows="3" name="objetivo" id="txtObjetivo" required></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-xs-offset-2 col-xs-10 col-sm-offset-2 col-sm-10">
                   <button type="submit" class="btn btn-warning pull-right">Enviar <span class="glyphicon glyphicon-chevron-right"></span></button>
                 </div>
               </div>
             </form>
-
           </div>
+
 
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <h4>Atendimento por email</h4>
@@ -96,5 +96,18 @@
         ?>
         <script src="js/jquery.jcarousel.min.js"></script>
         <script src="js/jcarousel.responsive.js"></script>
+        <script>
+          $(function() {
+              $('.boxContatos form').submit(function() {
+               var papi = $(this);
+               $('.btn-warning',papi).attr('disabled','disabled').text('Enviando...');
+                $.post('http://grupotrocaki.com.br/ajaxRetorno.php?type=2',$(this).serialize(),function(data) {
+                    $('.btn-warning',papi).removeAttr('disabled').text('Enviado!');
+                     setTimeout(function() {window.location = 'index.php'},3000);
+                });
+              return false;
+            });    
+          });
+        </script>
     </body>
 </html>

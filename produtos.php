@@ -56,7 +56,7 @@
       var p = "";
       var busy = 0;
       <?php
-      //echo isset($_GET['subcategoria'])? "s = '&subcategoria=".$_GET['subcategoria']."';\n $('#".$_GET['subcategoria']."').parents('li').children('ul').slideToggle('slow');\n" : "";
+      echo isset($_GET['subcategoria'])? "s = '&subcategoria=".$_GET['subcategoria']."';\n" : ""; //  $('#".$_GET['subcategoria']."').parents('li').children('ul').slideToggle('slow');\n" : "";
       echo isset($_GET['pesquisar'])? "p = '&pesquisar=".$_GET['pesquisar']."';\n" : ""; 
       ?>
       carregaProdutos(s);
