@@ -212,7 +212,6 @@ function adminCampos2($campos,$config,$dados, $idOrcamento) {
 	//)
 	
 
-
 	$saida  = '<form name="frmDados" action="../app/'.$config['arquivo'].'.php?faz=dados'.$config['urlfixo'].'" method="post" enctype="multipart/form-data">';
 	$saida .= '<input type="hidden" name="'.$config['id'].'" value="'.$dados[$config['id']].'">';
 	$saida .= '<fieldset class="adicionar"><legend>Informa&ccedil;&otilde;es</legend><table>';

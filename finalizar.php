@@ -131,8 +131,8 @@
 				<h3 style='font-size: 20px;color: #046095;font-family: Trebuchet MS !important;'>Entre em contato ou faça-nos uma visita</h3>
 				<p style='font-size: 17px;'>Rua Monteiro Lobato, 987<br>
 					Jaboticabal</p>
-				<p style='font-size: 17px;'>(16) 3877-7919</p>
-				<p style='font-size: 17px;'>grupotrocaki@grupotrocaki.com.br</p>
+				<p style='font-size: 17px;'>(16) 3202-1178</p>
+				<p style='font-size: 17px;'>contato@grupotrocaki.com.br</p>
 
 				<div style='float: right;  margin-top: -65px;'><!--Logo Mana-->
 					<a href='http://www.manaweb.com.br' target='_blank'><img src='http://grupotrocaki.com.br/img/logo-mana.png' alt='Maná Web'></a>
@@ -148,7 +148,7 @@
 			'assunto' => 'Orçamentos',
 			'remetente' => 'contato@grupotrocaki.com.br',
 			'nomeRemetente' => 'TrocaKi',
-			'destino' => array('Cliente' => $email),
+			'destino' => array('Cliente' => $email,'TrocaKi' => 'contato@grupotrocaki.com.br'),
 			'corpo' => $msg
 
 		);

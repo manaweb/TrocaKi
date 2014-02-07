@@ -47,7 +47,7 @@
                     $idCheck = str_replace(" ","",$checkbox[$i]);
                     $sqlVariacao = "select * from tbprodutos_variacoes where id=".$idCheck;
                     $dadosVariacao = mysql_fetch_array(mysql_query($sqlVariacao));
-                    echo "<p><label><input type='radio' checked name='variacao' value='".$dadosVariacao['variacao']."' />".$dadosVariacao['variacao']."</label></p>";
+                    echo "<p><label><input type='radio' checked name='variacao' value='".utf8_encode($dadosVariacao['variacao'])."' />".utf8_encode($dadosVariacao['variacao'])."</label></p>";
                   }
                 }else{
                   echo "<input type='hidden' name='variacao' value='Único' />";
@@ -126,8 +126,18 @@
     </div>
     </div>
     <?php include('rodape.php'); ?>
+    <script type="text/javascript" src="zoom/js/jquery.zoom.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
     <script>
         $(function(){
+
+           $('.bxslider').bxSlider({
+            minSlides: 4,
+            maxSlides: 4,
+            slideWidth: 190,
+            slideMargin: 10
+
+          });
 
           $(".qtdMore").click(function(){
             var qtd = parseInt($("#qtd").val());
@@ -161,18 +171,5 @@
 
         });
       </script>
-      <script src="js/jquery.bxslider.min.js"></script>
-    <script>
-    $(function(){
-      $('.bxslider').bxSlider({
-        minSlides: 4,
-        maxSlides: 4,
-        slideWidth: 190,
-        slideMargin: 10
-
-      });
-    })
-    </script>
-    <script type="text/javascript" src="zoom/js/jquery.zoom.js"></script>
     </body>
 </html>
