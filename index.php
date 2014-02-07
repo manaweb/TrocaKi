@@ -63,7 +63,7 @@
               <div class="form-group">
                 <label for="txtObjetivo" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 control-label">OBJETIVO DO CONTATO</label>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                  <textarea class="form-control" rows="3" name="objetivo" id="txtObjetivo" required></textarea>
+                  <textarea class="form-control" rows="2" name="objetivo" id="txtObjetivo" required></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -78,7 +78,7 @@
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <h4>Atendimento por email</h4>
             <span class="icone"></span>
-            <p>Mande uma mensagem para a nos e tire suas dúvidas, conheça os lançamentos e envie comentários ou sugestões.</p>
+            <p>Mande uma mensagem para nós e tire suas dúvidas, conheça os lançamentos e envie comentários ou sugestões.</p>
             <a href="mailto:contato@grupotrocaki.com.br" class="btn btn-warning pull-right">CLIQUE E TIRE SUAS DÚVIDAS <span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
 

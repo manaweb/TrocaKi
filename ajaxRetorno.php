@@ -25,7 +25,7 @@ switch($type) {
 		$opts['assunto'] = 'Contato';
 	break;
 	case 2:
-		$opts['destino'] = array('Financeiro' => 'wesley@manaweb.com.br');
+		$opts['destino'] = array('Financeiro' => 'financeiro@grupotrocaki.com.br');
 		$opts['assunto'] = 'Central de Vendas';
 	break;
 }

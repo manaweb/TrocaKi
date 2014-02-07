@@ -115,7 +115,7 @@
                 while($dadosBanner = mysql_fetch_assoc($result)){
                   $html .= 
                   '<div class="item '.$active.'">
-                    <div style="width: 100%;height: 439px;background: url(painel/arquivos/banner/'.$dadosBanner['arquivo'].') center no-repeat;"></div>
+                    <div style="width: 100%;height: 439px;background: url(\'painel/arquivos/banner/'.$dadosBanner['arquivo'].'\') center no-repeat;"></div>
                   </div>';
                   $active = "";
                 }
